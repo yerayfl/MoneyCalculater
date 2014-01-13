@@ -18,6 +18,10 @@ public class Number {
         numerator = number;
         denominator = 1;
     }
+    public Number(int number){
+        numerator = number;
+        denominator = 1;
+    }
 
     private Number buildnumber(double number) {
         double count = 0;
