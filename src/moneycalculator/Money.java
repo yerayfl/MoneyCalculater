@@ -26,7 +26,7 @@ public class Money {
 
     @Override
     public String toString() {
-        return amount.toString() + " " + currency;
+        return amount.toString() + " " + currency.toString();
     }
 }
 
