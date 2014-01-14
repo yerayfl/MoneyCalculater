@@ -75,7 +75,8 @@ public class Number {
         }
         return true;
     }
-    private String toSting(){
+    @Override
+    public String toString(){
         Double result = numerator/denominator;
         return result.toString();
     }
