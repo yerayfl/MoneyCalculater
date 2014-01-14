@@ -23,12 +23,12 @@ public class CalculateCommand extends Command{
 
 
     private double getExchangeRate() {
-        return 0.9;
+        return 1;
     }
 
 
     private Number calculateAmount() {
-        return moneyDialog.getMoney().getAmount().multiplicationNumber(getExchangeRate());
+        return (moneyDialog.getMoney().getAmount()).multiplicationNumber(getExchangeRate());
     }
 
 
