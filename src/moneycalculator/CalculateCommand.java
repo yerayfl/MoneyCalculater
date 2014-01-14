@@ -1,13 +1,10 @@
 package moneycalculator;
 
-
-public class CalculateCommand extends Command{
-
+public class CalculateCommand extends Command {
 
     private final MoneyDialog moneyDialog;
     private final CurrencyDialog currencyDialog;
     private final MoneyViewer moneyViewer;
-
 
     public CalculateCommand(MoneyDialog moneyDialog, CurrencyDialog currencyDialog, MoneyViewer moneyViewer) {
         this.moneyDialog = moneyDialog;
@@ -15,23 +12,18 @@ public class CalculateCommand extends Command{
         this.moneyViewer = moneyViewer;
     }
 
-
     @Override
     public void execute() {
-        moneyViewer.show(new Money(calculateAmount(), currencyDialog.getCurrency()));
-    }
 
+        moneyViewer.show(new Money(calculateAmount(), currencyDialog.getCurrency()));
+
+    }
 
     private double getExchangeRate() {
         return 1;
     }
 
-
     private Number calculateAmount() {
         return (moneyDialog.getMoney().getAmount()).multiplicationNumber(getExchangeRate());
     }
-
-
 }
-
-  

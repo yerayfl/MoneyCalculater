@@ -11,14 +11,17 @@ public class Number {
     }
 
     public Number(double number) {
-        buildnumber(number);
-
-    }
-    public Number(long number){
+        // buildnumber(number);
         numerator = number;
         denominator = 1;
     }
-    public Number(int number){
+
+    public Number(long number) {
+        numerator = number;
+        denominator = 1;
+    }
+
+    public Number(int number) {
         numerator = number;
         denominator = 1;
     }
@@ -27,12 +30,13 @@ public class Number {
         double count = 0;
         double diez = 10;
 
-
         while ((number - ((int) number)) != 0) {
             number = number * 10;
             count++;
         }
-
+        if (count == 0) {
+            return new Number(number, 1);
+        }
         return new Number(number, Math.pow(diez, count));
 
 
@@ -40,7 +44,7 @@ public class Number {
 
     private void numberSimplify() {
         int prime = 2;
-        while ((prime >= numerator) || (prime >= denominator)) {
+        while ((prime <= numerator) || (prime <= denominator)) {
             if (((numerator % prime) == 0) && (denominator % prime) == 0) {
                 numerator = numerator / prime;
                 denominator = denominator / prime;
@@ -69,18 +73,20 @@ public class Number {
 
     private boolean isprime(int prime) {
         for (int i = 2; i < prime; i++) {
-            if ((prime % i)==0) {
+            if ((prime % i) == 0) {
                 return false;
             }
         }
         return true;
     }
+
     @Override
-    public String toString(){
-        Double result = numerator/denominator;
-        return result.toString();
+    public String toString() {
+        double result = numerator / denominator;
+        return String.valueOf(result);
     }
-    public Number multiplicationNumber(double product){
-        return new Number ((numerator*product),denominator);    
+
+    public Number multiplicationNumber(double product) {
+        return new Number((numerator * product), denominator);
     }
 }
