@@ -1,5 +1,6 @@
-package moneycalculator;
+package UserInterface;
 
+import Model.Money;
 import java.awt.FlowLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;

@@ -1,5 +1,11 @@
-package moneycalculator;
+package Control;
 
+import UserInterface.MoneyDialog;
+import UserInterface.MoneyViewer;
+import UserInterface.MoneyViewerPanel;
+import UserInterface.CurrencyDialogPanel;
+import UserInterface.CurrencyDialog;
+import UserInterface.MoneyDialogPanel;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.HeadlessException;

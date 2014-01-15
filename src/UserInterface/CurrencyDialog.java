@@ -1,4 +1,6 @@
-package moneycalculator;
+package UserInterface;
+
+import Model.Currency;
 
 public interface CurrencyDialog {
 

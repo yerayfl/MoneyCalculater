@@ -1,5 +1,7 @@
-package moneycalculator;
+package UserInterface;
 
+import Model.Money;
+import Model.Number;
 import java.awt.FlowLayout;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

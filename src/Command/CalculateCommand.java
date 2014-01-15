@@ -1,4 +1,10 @@
-package moneycalculator;
+package Control;
+
+import UserInterface.MoneyDialog;
+import UserInterface.MoneyViewer;
+import UserInterface.CurrencyDialog;
+import Model.Money;
+import Model.Number;
 
 public class CalculateCommand extends Command {
 
@@ -20,7 +26,7 @@ public class CalculateCommand extends Command {
     }
 
     private double getExchangeRate() {
-        return 1;
+        return 0.9;
     }
 
     private Number calculateAmount() {
