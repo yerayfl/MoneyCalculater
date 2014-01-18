@@ -1,6 +1,7 @@
 package UserInterface;
 
 import Model.Currency;
+import Persistence.FileCurrencySetLoader;
 import java.awt.FlowLayout;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
@@ -31,7 +32,7 @@ public class CurrencyDialogPanel extends JPanel implements CurrencyDialog {
     }
 
     private JComboBox createCurrencyDisplay() {
-        JComboBox comboBox = new JComboBox(new String[]{"EUR", "USD", "CAD", "GBP"});
+        JComboBox comboBox = new JComboBox(new FileCurrencySetLoader("C:\\Users\\Yeray\\Documents\\NetBeansProjects\\MoneyCalculator\\ExchangeRate.txt").load());
         comboBox.setSelectedItem(currency);
         comboBox.addItemListener(new ItemListener() {
             @Override
